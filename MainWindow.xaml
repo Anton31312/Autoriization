@@ -1,0 +1,163 @@
+﻿<Window x:Class="StrakhFed.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StrakhFed"
+        mc:Ignorable="d"
+        Title="Autorisation" 
+        Height="700" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="SkyBlue"/>
+
+        <TextBlock Text="Авторизация"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="40"
+                   Foreground="White"
+                   />
+
+        <TextBlock Grid.Row="1"
+                   Text="Введите логин"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="25"
+                   Foreground="DeepSkyBlue"/>
+
+        <TextBox Grid.Row="2"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Top"
+                 VerticalContentAlignment="Center"
+                 Height="30"
+                 Width="200"
+                 x:Name="tbLog"
+                 />
+
+        <TextBlock Grid.Row="3"
+                   Text="Введите пароль"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="25"
+                   Foreground="DeepSkyBlue"/>
+
+        <TextBox Grid.Row="4"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Top"
+                 VerticalContentAlignment="Center"
+                 Height="30"
+                 Width="200"
+                 x:Name="tbPass"
+                 />
+
+        <TextBlock Grid.Row="5"
+                   Text="Введите код"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="25"
+                   Foreground="DeepSkyBlue"
+                   x:Name="txtCapch1"
+                   Visibility="Collapsed"/>
+
+        <TextBox Grid.Row="7"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Height="30"
+                 Width="200"
+                 x:Name="tbCapch"
+                 Visibility="Collapsed"/>
+
+       
+
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+       
+        <TextBlock x:Name="txtCapch"
+                   HorizontalAlignment="Center"
+                   Margin="10"
+                   VerticalAlignment="Center"
+                   Text="HrF2E2"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="DarkBlue"
+                   Visibility="Collapsed"/>
+
+        <Image x:Name="imgCapcha"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Source="{DynamicResource Shum}"
+               Margin="10"
+               Opacity="0.4"
+               Height="60"
+               Width="110"
+               Visibility="Collapsed"/>
+
+
+            <Button x:Name="btnCapch"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Height="30"
+                Width="150"
+                Margin="0 0 20 0"
+                Background="SkyBlue"
+                Foreground="White"
+                Content="Обновить"
+                FontSize="20"
+                Click="btnCapch_Click"
+                Visibility="Collapsed"/>
+        </Grid>
+
+        <CheckBox Grid.Row="4"
+                  Content="Запомнить меня"
+                  x:Name="chbRememb"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Bottom" Checked="chbRememb_Checked"
+                  />
+
+        <Button x:Name="btnSign"
+                Grid.Row="8"
+                Height="30"
+                Width="150"
+                Background="SkyBlue"
+                Foreground="White"
+                Content="Войти"
+                FontSize="20"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="20 0 0 0"
+                Click="btnSign_Click"/>
+
+        <Button x:Name="btnExit"
+                Grid.Row="8"
+                Height="30"
+                Width="150"
+                Background="SkyBlue"
+                Foreground="White"
+                Content="Выйти"
+                FontSize="20"
+                HorizontalAlignment="Right"
+                Margin="0 0 20 0" 
+                Click="btnExit_Click"/>
+
+    </Grid>
+</Window>
